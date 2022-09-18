@@ -43,10 +43,13 @@ def letter_picker():
 
 
 
-letter = letter_picker()
+# letter = letter_picker()
+letter = "Z"
+
 list_of_countries = []
-number_of_countries = 0
+number_of_countries = 1
 correct_inputs = []
+
 
 
 
@@ -66,37 +69,92 @@ os.system('cls||clear')
 
 
 
-print(f'Name all {number_of_countries} countries that start with the letter {letter}:\n')
+def name_the_countries():
+    incorrect_input_chances= 3 
+    print(f'Name all {number_of_countries} countries that start with the letter {letter}\n')
+    while len(list_of_countries) > 0:
+        user_input = input(f'Enter a country name starting with {letter}: ').capitalize()
+        os.system('cls||clear')
+
+        if user_input == 'Q':
+            break
+            
+        elif user_input in list_of_countries:
+            print('Good Job!')
+            # Removes correct answers from list and adds to correct inputs list
+            list_of_countries.pop(list_of_countries.index(user_input))
+            correct_inputs.append(user_input) 
+
+            print('You correctly named: ')
+            print(*correct_inputs, sep=", ")
+            print('\n')
+
+            if len(list_of_countries) == 0:
+                os.system('cls||clear')
+                print(f'You got all the countries starting with {letter}!')
+                print('You correctly named: ')
+                print(*correct_inputs, sep=", ")
+                print('\n')
+                break
+        
+        elif user_input not in list_of_countries:
+            print('Incorrect!')
+            incorrect_input_chances -= 1
+            print(f'You have {incorrect_input_chances} chances left\n')
+            if incorrect_input_chances == 0:
+                os.system('cls||clear')
+                print('You have run out of chances!')
+                if len(correct_inputs) >0:
+                    print('You correctly named: ')
+                    print(*correct_inputs, sep=", ")
+                    print('\n')
+                break
 
 
-user_input = input('Enter a country name: ').capitalize()
+
+name_the_countries()
 
 
 
 
-while user_input in list_of_countries:
-    if user_input in list_of_countries:
-        print(f'Good Job!')
-        print(*correct_inputs, sep=", ")
 
 
 
-    list_of_countries.pop(list_of_countries.index(user_input))
-    correct_inputs.append(user_input)
-    # print(list_of_countries)
-    print(f'Corrrect answers received: {correct_inputs}')
-
-    user_input = input('Enter a country name: ').capitalize()
-
-    if user_input in correct_inputs:
-        print('You already entered that country!')
-        user_input = input('Enter a country name: ').capitalize()
 
 
-print(f'You got {len(correct_inputs)} correct answers!')
 
-print('You missed the following countries: ')
-print(*list_of_countries, sep=", ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # # print(list_of_countries)
+    # print(f'Corrrect answers received: {correct_inputs}')
+
+    # user_input = input('Enter a country name: ').capitalize()
+
+    # if user_input in correct_inputs:
+    #     print('You already entered that country!')
+    #     user_input = input('Enter a country name: ').capitalize()
+
+
+# print(f'You got {len(correct_inputs)} correct answers!')
+
+# print('You missed the following countries: ')
+# print(*list_of_countries, sep=", ")
 
 
 
