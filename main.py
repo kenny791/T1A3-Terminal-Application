@@ -1,4 +1,5 @@
 import os
+import clearing
 from re import A
 from pycountry import countries
 import pycountry
@@ -40,11 +41,9 @@ def letter_picker():
 
 
 
-
-
-
-# letter = letter_picker()
-letter = "Z"
+letter = letter_picker()
+# # single letter test
+# letter = "Z"
 
 list_of_countries = []
 number_of_countries = 1
@@ -61,7 +60,7 @@ for country in countries:
         number_of_countries=len(list_of_countries)
 print(list_of_countries)
 
-os.system('cls||clear')
+clearing.clear()
 
 
 
@@ -74,40 +73,60 @@ def name_the_countries():
     print(f'Name all {number_of_countries} countries that start with the letter {letter}\n')
     while len(list_of_countries) > 0:
         user_input = input(f'Enter a country name starting with {letter}: ').capitalize()
-        os.system('cls||clear')
-
+        clearing.clear()
+        
+        # handles quit command
         if user_input == 'Q':
             break
-            
+        
+        # handles correct inputs
         elif user_input in list_of_countries:
             print('Good Job!')
             # Removes correct answers from list and adds to correct inputs list
             list_of_countries.pop(list_of_countries.index(user_input))
             correct_inputs.append(user_input) 
-
             print('You correctly named: ')
             print(*correct_inputs, sep=", ")
             print('\n')
 
+            # handles remaining countries and correct completion
             if len(list_of_countries) == 0:
-                os.system('cls||clear')
+                clearing.clear()
                 print(f'You got all the countries starting with {letter}!')
                 print('You correctly named: ')
                 print(*correct_inputs, sep=", ")
                 print('\n')
                 break
         
+        # handles duplicate inputs
+        elif user_input in correct_inputs:
+            print('You already named that country!')
+            print('You correctly named: ')
+            print(*correct_inputs, sep=", ")
+            print('\u001b[30m\n')
+
+        # handles blank inputs
+        elif user_input == '':
+            print('You did not enter a country name!')
+            print('You correctly named: ')
+            print(*correct_inputs, sep=", ")
+            print('\n')
+
+        # handles incorrect inputs
         elif user_input not in list_of_countries:
-            print('Incorrect!')
+            print(f'Incorrect!, \u001b[31m{user_input}\u001b[30m is not on the list')
             incorrect_input_chances -= 1
-            print(f'You have {incorrect_input_chances} chances left\n')
+            print(f'You have {incorrect_input_chances}/3 chances left\n')
             if incorrect_input_chances == 0:
-                os.system('cls||clear')
+                clearing.clear()
                 print('You have run out of chances!')
                 if len(correct_inputs) >0:
                     print('You correctly named: ')
                     print(*correct_inputs, sep=", ")
                     print('\n')
+                print('The countries you missed were: ')
+                print(*list_of_countries, sep=", ")
+                print('\n')
                 break
 
 
@@ -118,9 +137,36 @@ name_the_countries()
 
 
 
+country = 'Australia'
 
 
 
+
+
+
+
+
+
+
+
+
+
+def name_the_captials():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+name_the_capitals()
 
 
 
@@ -183,7 +229,7 @@ name_the_countries()
 
 
 # # Splash screen
-# os.system('cls||clear')
+# clearing.clear()
 # print ('''
 #  ██████╗ ███████╗ ██████╗ ████████╗██████╗  █████╗ ██╗███╗   ██╗███████╗██████╗ 
 # ██╔════╝ ██╔════╝██╔═══██╗╚══██╔══╝██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██╔══██╗
@@ -210,14 +256,14 @@ name_the_countries()
 #     options = ['Menu1', 'Menu2', 'Menu3']
 #     option, index = pick(options, title)
 #     if option == 'Menu1':
-#         os.system('cls||clear')
+#         clearing.clear()
 #         print('You selected Menu1\n')
 #         letter_picker()
 #     elif option == 'Menu2':
-#         os.system('cls||clear')
+#         clearing.clear()
 #         print('You selected Menu2')
 #     elif option == 'Menu3':
-#         os.system('cls||clear')
+#         clearing.clear()
 #         print('You selected Menu3')
 #         exit()
 
