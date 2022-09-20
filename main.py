@@ -41,24 +41,40 @@ from colorama import Fore, Back, Style
 
 
 
+def app_controller():
+    choice =input('\nPress Enter to search again: \n[m] to go back to menu \n[q] to quit the app\n')
+
+    if choice == 'm':
+        pass
+
+    if choice == 'q':
+        SystemExit
+
+
+
 
 
 
 def lookup():
+    clearing.clear()
 
-    print('\n')
     searchcountry = input('Please enter country name for more information: ')
-
-
+    if searchcountry == '':
+        lookup()
 
     country = CountryInfo(searchcountry)
 
+    print(f'Subregion\t{country.subregion()}')
     print(f'Area\t\t{country.area()} sqkm')
     print(f'Population\t{country.population()}')
     print(f'Currency\t{country.currencies()}')
     print(f'Calling Code\t+{country.calling_codes()}')
 
+    app_controller()
 
+    lookup()
+
+    
 
 
 lookup()
