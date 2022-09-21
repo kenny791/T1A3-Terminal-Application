@@ -19,6 +19,138 @@ from name_countries import name_countries
 
 
 
+# Splash screen
+clearing.clear()
+print (Fore.BLUE+'''
+ ██████  ███████  ██████     ████████ ██████   █████  ██ ███    ██ ███████ ██████  
+██       ██      ██    ██       ██    ██   ██ ██   ██ ██ ████   ██ ██      ██   ██ 
+██   ███ █████   ██    ██       ██    ██████  ███████ ██ ██ ██  ██ █████   ██████  
+██    ██ ██      ██    ██       ██    ██   ██ ██   ██ ██ ██  ██ ██ ██      ██   ██ 
+ ██████  ███████  ██████  ██    ██    ██   ██ ██   ██ ██ ██   ████ ███████ ██   ██
+    ''')
+input("\n \t \t \t\t Press enter to continue")
+
+
+
+# Menu selection screen
+def menu():
+    title = 'Please choose an option and press enter: '
+    options = ['Name the Countries', 'Menu2', 'Exit']
+    option, index = pick(options, title)
+    if option == 'Name the Countries':
+        clearing.clear()
+        print(Fore.BLACK+''' ---NAME THE COUNTRIES---
+    Welcome to the Name the countries training module. 
+    Here you can test your skills by naming all the countries starting with the letter prompted. You will have 3 chances for any mistakes. Have fun!
+        ''')
+        input("Press enter to continue")
+        clearing.clear()
+
+        name_countries()
+        exit()
+        SystemExit
+    elif option == 'Menu2':
+        pass
+
+    elif option == 'Country Information Lookup':
+        clearing.clear()
+        lookup()
+    elif option == 'Exit':
+        clearing.clear()
+        exit()
+        SystemExit
+
+
+menu()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # title ='Please choose your favorite programming language: '
+# # options = ['Menu1', 'Menu2', 'Menu3']
+# # menu_selection, i = pick(options, title)
+# # print(menu_selection)
+
+
+
+
+
+
+# # Menu selection
+# # title = 'Please choose your favorite programming language: '
+
+# # choice_1 = ''
+# # choice_2 = ''
+# # choice_3 = ''
+# # choice_4 = ''
+
+
+# # foo = ['a', 'b', 'c', 'd', 'e']
+# # set={}
+# # for i in range(4):
+# #     set.add(random.choice(foo))
+# #     print(set)
+# # print(set)
+
+# # choices = [choice_1, choice_2, choice_3, choice_4]
+# # selection, i = pick(choices)
+# # print(selection)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -300,166 +432,6 @@ from name_countries import name_countries
 # print(list_of_countries)
 
 # clearing.clear()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Splash screen
-clearing.clear()
-print (Fore.BLUE+'''
- ██████  ███████  ██████     ████████ ██████   █████  ██ ███    ██ ███████ ██████  
-██       ██      ██    ██       ██    ██   ██ ██   ██ ██ ████   ██ ██      ██   ██ 
-██   ███ █████   ██    ██       ██    ██████  ███████ ██ ██ ██  ██ █████   ██████  
-██    ██ ██      ██    ██       ██    ██   ██ ██   ██ ██ ██  ██ ██ ██      ██   ██ 
- ██████  ███████  ██████  ██    ██    ██   ██ ██   ██ ██ ██   ████ ███████ ██   ██
-    ''')
-
-input("\n \t \t \t\t Press enter to continue")
-
-
-
-
-
-
-
-
-
-# Menu selection screen
-def menu():
-
-    title = 'Please choose an option and press enter: '
-    options = ['Menu1', 'Menu2', 'Menu3']
-    option, index = pick(options, title)
-    if option == 'Menu1':
-        clearing.clear()
-        print('You selected Menu1\n')
-        countries_of_same_letter()
-    elif option == 'Menu2':
-        clearing.clear()
-        print('You selected Menu2')
-    elif option == 'Menu3':
-        clearing.clear()
-        print('You selected Menu3')
-        exit()
-
-
-menu()
-
-
-
-
-
-
-
-
-# name_countries()
-# SystemExit
-
-
-
-# clearing.clear()
-# lookup()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # title ='Please choose your favorite programming language: '
-# # options = ['Menu1', 'Menu2', 'Menu3']
-# # menu_selection, i = pick(options, title)
-# # print(menu_selection)
-
-
-
-
-
-
-# # Menu selection
-# # title = 'Please choose your favorite programming language: '
-
-# # choice_1 = ''
-# # choice_2 = ''
-# # choice_3 = ''
-# # choice_4 = ''
-
-
-# # foo = ['a', 'b', 'c', 'd', 'e']
-# # set={}
-# # for i in range(4):
-# #     set.add(random.choice(foo))
-# #     print(set)
-# # print(set)
-
-# # choices = [choice_1, choice_2, choice_3, choice_4]
-# # selection, i = pick(choices)
-# # print(selection)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
