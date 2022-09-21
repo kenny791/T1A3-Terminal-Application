@@ -8,7 +8,7 @@ from colorama import init
 from colorama import Fore, Back, Style
 from pick import pick
 from rand_country import *
-
+import numpy
 
 
 
@@ -57,8 +57,6 @@ def options():
 
 def capitals():
     clearing.clear()
-
-
     while True:
         try:
             options()
@@ -66,96 +64,33 @@ def capitals():
         except:
             continue
 
-    print(combined_list)
+    # print(combined_list)
     
 
-
-
-
-
-
-
-    # # option_2 = random.choice(rand_country_list())
-    # # option_3 = random.choice(rand_country_list())
-    # # option_4 = random.choice(rand_country_list())
-
-
-
-
-
-
-    # # print(option_2)
-    # # print(option_3)
-    # # print(option_4)
-
-
-
-
+    answer_input =0
     
+            
+    while True:
+        clearing.clear()
+        print('Select the country with the correct capital city\n')
+        print(f'{combined_list[0][0]}. {combined_list[0][1]} - {combined_list[0][2]}')
+        print(f'{combined_list[1][0]}. {combined_list[1][1]} - {combined_list[1][2]}')
+        print(f'{combined_list[2][0]}. {combined_list[2][1]} - {combined_list[2][2]}')
+        print(f'{combined_list[3][0]}. {combined_list[3][1]} - {combined_list[3][2]}')
+        answer_input= input('\nType a,b,c,d for your answer: ').upper()
+            
+        if answer_input == 'A' or answer_input == 'B' or answer_input == 'C' or answer_input == 'D' or answer_input == 'M':
+            break
+        
 
-
-
-
-    # print (CountryInfo(option_1).capital())
-    # # print (CountryInfo(option_2).capital())
-    # # print (CountryInfo(option_3).capital())
-    # # print (CountryInfo(option_4).capital())
-
-
-
-
-
-    # options =['A', 'B', 'C', 'D']
-
-
-
-
-    # # selection screen
-
-    # # menu['1']="Option 1" 
-    # # menu['2']="Option 2"
-    # # menu['3']="Option 3"
-    # # menu['4']="Exit"
-
-
-
-
-
-
-
-
-    # # print(f'Select the capital of {country}')
-    # # print(f'option 1 {option_1}')
-
-
-
-
-
-
-    # # while True: 
-    # #     options=menu.keys() 
-    # #     for entry in options: 
-    # #     print (entry, menu[entry])
-
-    # #     selection=input("Please Select:") 
-    # #     if selection =='1': 
-    # #     print ("add") 
-    # #     elif selection == '2': 
-    # #     print ("delete")
-    # #     elif selection == '3':
-    # #     print ("find") 
-    # #     elif selection == '4': 
-    # #     break
-    # #     else: 
-    # #     print ("Unknown Option Selected!")
-
-
-
-
-
-
-
-
+    i=0
+    while answer_input != combined_list[i][0]:
+        i += 1
+    if combined_list[i][3] =='Correct':
+        print('You are correct!')
+    else:
+        print('You are incorrect')
+    
 
 
 
