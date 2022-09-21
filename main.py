@@ -77,14 +77,6 @@ from name_countries import name_countries
 
 
 
-
-
-
-# ====================================================================================================
-
-
-
-
 # # selection screen
 
 # menu = {}
@@ -94,16 +86,6 @@ from name_countries import name_countries
 # menu['4']="Exit"
 
 
-
-
-
-name_countries()
-SystemExit
-
-
-
-# clearing.clear()
-# lookup()
 
 
 
@@ -358,47 +340,67 @@ SystemExit
 
 
 
-# # Splash screen
+# Splash screen
+clearing.clear()
+print (Fore.BLUE+'''
+ ██████  ███████  ██████     ████████ ██████   █████  ██ ███    ██ ███████ ██████  
+██       ██      ██    ██       ██    ██   ██ ██   ██ ██ ████   ██ ██      ██   ██ 
+██   ███ █████   ██    ██       ██    ██████  ███████ ██ ██ ██  ██ █████   ██████  
+██    ██ ██      ██    ██       ██    ██   ██ ██   ██ ██ ██  ██ ██ ██      ██   ██ 
+ ██████  ███████  ██████  ██    ██    ██   ██ ██   ██ ██ ██   ████ ███████ ██   ██
+    ''')
+
+input("\n \t \t \t\t Press enter to continue")
+
+
+
+
+
+
+
+
+
+# Menu selection screen
+def menu():
+
+    title = 'Please choose an option and press enter: '
+    options = ['Menu1', 'Menu2', 'Menu3']
+    option, index = pick(options, title)
+    if option == 'Menu1':
+        clearing.clear()
+        print('You selected Menu1\n')
+        countries_of_same_letter()
+    elif option == 'Menu2':
+        clearing.clear()
+        print('You selected Menu2')
+    elif option == 'Menu3':
+        clearing.clear()
+        print('You selected Menu3')
+        exit()
+
+
+menu()
+
+
+
+
+
+
+
+
+# name_countries()
+# SystemExit
+
+
+
 # clearing.clear()
-# print ('''
-#  ██████╗ ███████╗ ██████╗ ████████╗██████╗  █████╗ ██╗███╗   ██╗███████╗██████╗ 
-# ██╔════╝ ██╔════╝██╔═══██╗╚══██╔══╝██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██╔══██╗
-# ██║  ███╗█████╗  ██║   ██║   ██║   ██████╔╝███████║██║██╔██╗ ██║█████╗  ██████╔╝
-# ██║   ██║██╔══╝  ██║   ██║   ██║   ██╔══██╗██╔══██║██║██║╚██╗██║██╔══╝  ██╔══██╗ 
-# ╚██████╔╝███████╗╚██████╔╝   ██║   ██║  ██║██║  ██║██║██║ ╚████║███████╗██║  ██║
-#  ╚═════╝ ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
-#     ''')
-
-# # input("\n \t \t \t Press enter to continue")
-# input()
+# lookup()
 
 
 
 
 
 
-
-
-# # Menu selection screen
-# def menu():
-
-#     title = 'Please choose an option and press enter: '
-#     options = ['Menu1', 'Menu2', 'Menu3']
-#     option, index = pick(options, title)
-#     if option == 'Menu1':
-#         clearing.clear()
-#         print('You selected Menu1\n')
-#         countries_of_same_letter()
-#     elif option == 'Menu2':
-#         clearing.clear()
-#         print('You selected Menu2')
-#     elif option == 'Menu3':
-#         clearing.clear()
-#         print('You selected Menu3')
-#         exit()
-
-
-# menu()
 
 
 
