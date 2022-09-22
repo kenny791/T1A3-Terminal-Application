@@ -1,6 +1,6 @@
 # T1A3 - Terminal Application
 
-[---Github Repo tbc---]()
+[Github Repo](https://github.com/kenny791/T1A3-Terminal-Application)
 
 [---Presentation tbc---]()
 
@@ -32,10 +32,26 @@
 ---
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Design
 
 ## Development Plan
-[---Trello Board tbc---]()
+[Trello Board](https://trello.com/b/WhCE9AiQ/t1a3-terminal-application)
 
 ## Features  
 ### Feature 1:  
@@ -57,11 +73,58 @@
 - error handling
 
 
+
+
+
+## Style Guide
+Pep8
+
+
+
+
+
+
+
 ## Testing
 
 
 
-## References  
+
+
+
+
+
+
+
+
+## How to install
+
+
+```
+
+```
+
+
+```
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+## References 
+
+### Ascii title
+http://patorjk.com/software/taag/#p=display&f=ANSI%20Regular&t=geo.trainer
+
 
 ### Pycountry
 https://pypi.org/project/pycountry/  
