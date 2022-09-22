@@ -2,14 +2,20 @@ from pycountry import countries
 import clearing
 import random
 from colorama import init
-from colorama import Fore, Back, Style
+from colorama import Fore
 from rand_country import *
 
+def menu():
+    from main import menu
+    menu()
 
 
 
 
 def name_countries():
+    '''This is the main body of the function,
+    It will prompt the user with a letter
+    and the user will need to name all the countries starting with the letter'''
     clearing.clear()
     correct_inputs = []
     number_of_countries = 1
@@ -75,7 +81,21 @@ def name_countries():
                 print(*list_of_countries, sep=", ")
                 print('\n')
                 break
+    
+    print(Fore.BLACK+'\nWould you like to play again?')
+
+    while True:
+        print('\nPress enter to continue...')
+        print('or [m] to go back to the main menu.')
+        user_selection=input().upper()  
+        print(user_selection)
+        if user_selection=='M':
+            menu()
+        elif user_selection =='':
+            break
+    name_countries() 
 
 
 
-name_countries()
+if __name__ == "__name_countries__":
+    name_countries()
