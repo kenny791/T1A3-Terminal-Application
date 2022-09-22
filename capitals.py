@@ -3,10 +3,16 @@ from countryinfo import CountryInfo
 import clearing
 import random
 from colorama import init
-from colorama import Fore, Back, Style
+from colorama import Fore
 # from pick import pick
 from rand_country import *
 # import numpy
+
+
+def menu():
+    from main import menu
+    menu()
+
 
 
 def answers():
@@ -44,40 +50,70 @@ def answers():
 
 def capitals():
     clearing.clear()
-    while True:
-        try:
-            answers()
-            break
-        except:
-            continue
+    correct = 0
+    for question in range(0,5):
+        while True:
+            try:
+                answers()
+                break
+            except:
+                continue
 
-    # print(combined_list)
-    
-
-    answer_input =0
-    
-            
-    while True:
-        clearing.clear()
-        print('Select the country with the correct capital city\n')
-        print(f'{combined_list[0][0]}. {combined_list[0][1]} - {combined_list[0][2]}')
-        print(f'{combined_list[1][0]}. {combined_list[1][1]} - {combined_list[1][2]}')
-        print(f'{combined_list[2][0]}. {combined_list[2][1]} - {combined_list[2][2]}')
-        print(f'{combined_list[3][0]}. {combined_list[3][1]} - {combined_list[3][2]}')
-        answer_input= input('\nInput a,b,c,d for your answer: ').upper()
-            
-        if answer_input == 'A' or answer_input == 'B' or answer_input == 'C' or answer_input == 'D' or answer_input == 'M':
-            break
+        # print(combined_list)
         
-    i=0
-    while answer_input != combined_list[i][0]:
-        i += 1
-    if combined_list[i][3] =='Correct':
-        print(Fore.GREEN+'You are correct!')
-    else:
-        print(Fore.RED+'You are incorrect')
+
+        answer_input =0
+        
+                
+        while True:
+            clearing.clear()
+            print (f'Question {question+1}/ 5.')
+            print(Fore.BLACK+'Select the country with the correct capital city\n')
+            print(f'{combined_list[0][0]}. {combined_list[0][1]} - {combined_list[0][2]}')
+            print(f'{combined_list[1][0]}. {combined_list[1][1]} - {combined_list[1][2]}')
+            print(f'{combined_list[2][0]}. {combined_list[2][1]} - {combined_list[2][2]}')
+            print(f'{combined_list[3][0]}. {combined_list[3][1]} - {combined_list[3][2]}')
+            answer_input= input('\nInput a,b,c,d for your answer: ').upper()
+                
+            if answer_input == 'A' or answer_input == 'B' or answer_input == 'C' or answer_input == 'D':
+                break
+            
+        i=0
+        while answer_input != combined_list[i][0]:
+            i += 1
+        if combined_list[i][3] =='Correct':
+            print(Fore.GREEN+'You are correct!')
+            correct +=1
+            while True:
+                user_input= input('\nPress enter to continue')
+                if user_input == '':
+                    break
+
+        else:
+            print(Fore.RED+'You are incorrect')
+            while True:
+                user_input= input('\nPress enter to continue')
+                if user_input == '':
+                    break
+
+
+    print(f'\nYou answered: {correct}/5 questions correctly.')
+    print(Fore.BLACK+'\nWould you like to play again?')
+
+    while True:
+        print('\nPress enter to continue...')
+        print('or [m] to go back to the main menu.')
+        user_selection=input().upper()  
+        print(user_selection)
+        if user_selection=='M':
+            menu()
+        elif user_selection =='':
+            break
+    capitals() 
+
+
     
 
 
-
-capitals()
+if __name__ == "__capitals__":
+    capitals() 
