@@ -3,70 +3,16 @@
 
 [Github Repo](https://github.com/kenny791/T1A3-Terminal-Application)
 
-[---Presentation tbc---]()
-
----
-## Table of Contents
-
-
-[Design](#Design)
-
-[Development Plan](#Development-Plan)
-
-
-
-[Features](#Features)  
-- [Feature 1](#feature-1)
-- [Feature 2](#feature-2)
-- [Feature 3](#feature-3)
-
-
-[References](#References)
-
-
-
-
-
-[Testing](#Testing)
-
-
----
-
+[Presentation](https://youtu.be/KLebj7j9KQQ)
 
 ## Style Guide
 This application was written in accordance with Pep8.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Design
-
 ## Development Plan
 [Trello Board](https://trello.com/b/WhCE9AiQ/t1a3-terminal-application)
 
 ## Features  
-
-
-
-### Feature #:  
-- Description
-- use of variables and the concept of variable scope
-- loops and conditional control structures
-- error handling
 
 ### Name The Countries Mode
 This mode is a game that will let user practice their country naming knowledge.   
@@ -85,47 +31,16 @@ This mode is a game to test users knowledge of capital cities. Users will be pre
 **Multiple Choice System**  
 The country and 
 
-
-
-
-
-
-
 ### Lookup Mode
 This mode is to allow users to further research information of countries they may have come across while using this app. When the country name is inputted additional information such as the population, currency, calling code, and geographical area.
-
-
-
-
-
 
 ### Navigation Menu
 A navigation menu has been implemented to allow for users to select between the different app modes and also exiting the app.  
 The menu accepts up and down cursor buttons and the return button to confirm the selection.  
 Any other input will not be registered.
 
-
-
-
-
-
-
-
-
-
 ## Testing
 The application was tested using a mix of manual testing and a testing script using the pytest module. The aim of the tests was to confirm there would not be any unexpected shutdown of the apps during its operation, interaction between third party modules and user inputs
-
-|Feature|Expected Outcome|Actual Outcome|Any Remaning Issue   |   
-|---|---|---|---|
-|Selection Menu   |Either of the 3 modes will launch or the app will gracefully close   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-
-
-
-
-
 
 
 ## How To Install
@@ -150,16 +65,6 @@ Your system will need the latest version of Python,PIP, and Git, before continui
 #### Removing Installed Modules 
 - Use the code below to remove modules installed by the shell script  
 `sh geotrainer.sh -ur`
-
-
-
-
-
-
-
-
-
-
 
 
 ## References 
