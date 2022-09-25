@@ -3,7 +3,6 @@
 
 [Github Repo](https://github.com/kenny791/T1A3-Terminal-Application)
 
-[Presentation](https://youtu.be/KLebj7j9KQQ)
 
 ## Style Guide
 This application was written in accordance with Pep8.
