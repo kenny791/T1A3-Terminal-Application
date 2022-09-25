@@ -10,8 +10,6 @@ def menu():
     menu()
 
 
-
-
 def name_countries():
     '''This is the main body of the function,
     It will prompt the user with a letter
@@ -56,7 +54,7 @@ def name_countries():
             print('You already named that country!')
             print('You correctly named: ')
             print(*correct_inputs, sep=", ")
-            print('\u001b[30m\n')
+            print('\u001b[34m\n')
 
         # handles blank inputs
         elif user_input == '':
@@ -67,7 +65,7 @@ def name_countries():
 
         # handles incorrect inputs
         elif user_input not in list_of_countries:
-            print(f'Incorrect!, \u001b[31m{user_input}\u001b[30m is not on the list')
+            print(f'Incorrect!, \u001b[31m{user_input}\u001b[34m is not on the list')
             incorrect_input_chances -= 1
             print(f'You have {incorrect_input_chances}/3 chances left\n')
             if incorrect_input_chances == 0:
@@ -82,7 +80,8 @@ def name_countries():
                 print('\n')
                 break
     
-    print(Fore.BLACK+'\nWould you like to play again?')
+
+    print(Fore.BLUE+'\nWould you like to play again?')
 
     while True:
         print('\nPress enter to continue...')
@@ -97,5 +96,5 @@ def name_countries():
 
 
 
-if __name__ == "__name_countries__":
+if __name__ == "__main__":
     name_countries()

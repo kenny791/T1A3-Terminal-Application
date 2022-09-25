@@ -1,12 +1,3 @@
-# import os
-# from re import A
-# from pycountry import countries
-# import pycountry
-# from countryinfo import CountryInfo
-# import list
-# import json
-# import time
-# import random
 from pick import pick
 import clearing
 import sys, traceback
@@ -15,12 +6,6 @@ from colorama import Fore
 from lookup import lookup
 from name_countries import name_countries
 from capitals import capitals
-
-
-
-
-
-
 
 def selection():
     while True:  
@@ -32,10 +17,6 @@ def selection():
             break
         elif user_selection== 'M':
             menu()
-
-
-
-
 
 
 # Splash screen
@@ -51,7 +32,7 @@ input("\n \t \t \t Press enter to continue")
 
 
 
-
+# menu screen
 def menu():
     '''Menu selection screen'''
     title = 'Please choose an option and press enter: '
@@ -87,8 +68,3 @@ def menu():
         clearing.clear()
         sys.exit(0)
 menu()
-
-
-
-
-
