@@ -1,16 +1,6 @@
 # T1A3 - Terminal Application
 # GEO.TRAINER
 
-[Github Repo](https://github.com/kenny791/T1A3-Terminal-Application)  
-[Presentation](https://youtu.be/KLebj7j9KQQ)
-
-## Style Guide
-This application was written in accordance with Pep8.
-
-
-## Development Plan
-[Trello Board](https://trello.com/b/WhCE9AiQ/t1a3-terminal-application)
-
 ## Features  
 
 ### Name The Countries Mode
@@ -64,6 +54,13 @@ Your system will need the latest version of Python,PIP, and Git, before continui
 #### Removing Installed Modules 
 - Use the code below to remove modules installed by the shell script  
 `sh geotrainer.sh -ur`
+
+## Style Guide
+This application was written in accordance with Pep8.
+
+
+## Development Plan
+[Trello Board](https://trello.com/b/WhCE9AiQ/t1a3-terminal-application)
 
 
 ## References 
